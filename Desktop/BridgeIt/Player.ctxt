@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Player
+comment0.text=\n\ The\ Player\ class\ represents\ the\ player\ class\ \n\n\ @author\ (Caiqin\ Zhou,\ Yining\ Li,\ Jane\ Yang)\n\ @version\ (v1)\n
+comment1.params=n\ num
+comment1.target=Player(java.lang.String,\ int)
+comment2.params=
+comment2.target=Player()
+comment2.text=\n\ Constructor\ for\ objects\ of\ class\ Player\n
+comment3.params=
+comment3.target=java.lang.String\ getName()
+comment4.params=
+comment4.target=int\ getNum()
+comment5.params=
+comment5.target=BridgeItBoard\ getBoard()
+comment6.params=
+comment6.target=boolean\ getIsTurn()
+comment7.params=xc\ yc
+comment7.target=int\ getVertexIndex(int,\ int)
+comment8.params=x
+comment8.target=void\ setIsTurn(boolean)
+comment9.params=w
+comment9.target=void\ setWin(boolean)
+numComments=10

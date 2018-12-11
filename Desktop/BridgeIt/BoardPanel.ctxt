@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=BoardPanel
+comment0.text=\n\ Write\ a\ description\ of\ class\ boardPanel\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=myGame
+comment1.target=BoardPanel(BridgeItGame)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ boardPanel\n
+comment2.params=g
+comment2.target=void\ paintComponent(java.awt.Graphics)
+numComments=3

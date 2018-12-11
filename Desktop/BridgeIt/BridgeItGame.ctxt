@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=BridgeItGame
+comment1.params=
+comment1.target=BridgeItGame()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ BridgeItGame\n
+comment2.params=
+comment2.target=Player\ getPlayer1()
+comment3.params=
+comment3.target=Player\ getPlayer2()
+comment4.params=
+comment4.target=void\ move()
+comment5.params=p
+comment5.target=boolean\ checkMoveable(Player)
+comment5.text=\n\ checkMoveable()\ check\ whether\ one\ add\ the\ arc\ (make\ a\ move)\n\ @return\ whether\ the\ move\ can\ be\ completed\n\ @param\ the\ player\ that\ is\ making\ the\ move\n
+comment6.params=current
+comment6.target=boolean\ checkWin(Player)
+comment6.text=\n\ checkWin()\ check\ after\ each\ move\ if\ the\ current\ player\ is\ winning\ \n\ @param\ the\ player\ who\ just\ played\ \n
+comment7.params=current
+comment7.target=boolean\ checkWinHelper(Player)
+comment7.text=\n\ checkWinHelper()\ check\ after\ each\ move\ if\ the\ current\ player\ has\ a\ potential\ to\ win\n\ by\ checking\ whether\ the\ vertices\ on\ the\ borders\ are\ connected\ \n\ if\ the\ current\ player\ number\ is\ 1\n\ \ \ \ startConnected\ indicates\ whether\ the\ leftmost\ vertices\ are\ connected\n\ \ \ \ endConnected\ indicates\ whether\ the\ rightmost\ vertices\ are\ connected\n\ \ \ \ if\ the\ current\ player\ number\ is\ 2\n\ \ \ \ startConnected\ indicates\ whether\ the\ topmost\ vertices\ are\ connected\n\ \ \ \ endConnected\ indicates\ whether\ the\ bottommost\ vertices\ are\ connected\n@return\ boolean\ if\ vertices\ on\ the\ borders\ are\ connected\ \n
+comment8.params=args
+comment8.target=void\ main(java.lang.String[])
+numComments=9

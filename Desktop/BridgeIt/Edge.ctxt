@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Edge
+comment0.text=\n\ Write\ a\ description\ of\ class\ Arc\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=a\ b
+comment1.target=Edge(Vertex,\ Vertex)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Arc\n
+comment2.params=
+comment2.target=void\ block()
+numComments=3

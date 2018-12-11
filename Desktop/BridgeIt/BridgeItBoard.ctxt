@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=BridgeItBoard
+comment0.text=\n\ Write\ a\ description\ of\ class\ BridgeItBoard\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=playerNum
+comment1.target=BridgeItBoard(int)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ BridgeItBoard\n
+comment2.params=
+comment2.target=int\ getNumVertices()
+comment3.params=i
+comment3.target=Vertex\ getVertex(int)
+comment4.params=vertex1\ vertex2
+comment4.target=void\ addEdge(Vertex,\ Vertex)
+comment5.params=vertex1\ vertex2
+comment5.target=boolean\ pathDFS(Vertex,\ Vertex)
+comment5.text=\n\ check\ whether\ a\ path\ is\ found\ from\ the\ start\ vertex\ to\ the\ end\ vertex\n\ @param\ the\ start\ vertex\n\ @param\ the\ end\ vertex\ \n
+comment6.params=target\ co
+comment6.target=void\ setConnected(Vertex,\ boolean)
+comment6.text=\n\ marks\ a\ vertex\ as\ connected\ or\ disconnected\n@param\ whether\ the\ vertex\ is\ connected\ \n@param\ the\ target\ vertex\ \n
+numComments=7
