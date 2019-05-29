@@ -1,0 +1,103 @@
+\documentclass[12pt]{amsart}
+\usepackage{amssymb}
+
+\usepackage{enumitem}
+\setlist[enumerate,1]{label=\arabic*.}
+\setlist[enumerate,2]{label=(\alph*)}
+\setlist[enumerate,3]{label=(\roman*)}
+
+
+\DeclareMathOperator{\perm}{P}
+\DeclareMathOperator{\comb}{C}
+\newcommand{\e}{\mathrm{e}}
+
+% To have all the question numbers be odd, we use an enumerate
+% environment to number the questions and, for every question after the
+% first, we begin a new question with
+% \stepcounter{enumi}
+% \item
+
+
+%--------------------------------------------------------------------
+\begin{document}
+
+\begin{center}
+  \bfseries
+  Ima Student\\
+  Homework number 1, due July 4, 1776\\
+  Odd numbered questions
+\end{center}
+
+\bigskip
+
+\begin{enumerate}
+\item  How many ways are there to collect 24 from 4 children and 6 adults if each
+person gives at least 1, but each child can give at most $4 and each adult at
+most $7?
+\bigskip
+The generating functions
+\begin{displaymath}
+(x+\frac{x^2}{2!}+/frac{x^3}{3!}+\frac x^4)^4(x+x^2+x^3+x^4+x^5+x^6+x^7)^6
+\end{displaymath}
+  \begin{enumerate}
+  \item It depends on what you mean by \emph{buried}.
+  \item Perhaps, because $\comb(6,2) = \binom{6}{2}$.
+  \end{enumerate}
+  Then again, $\perm(6,2) = \frac{6!}{4!}$.  That's worth repeating
+  more prominently:
+  \begin{displaymath}
+    \perm(6,2) = \frac{6!}{4!}
+  \end{displaymath}
+
+\stepcounter{enumi}
+\item What was the color of George Washington's white horse?
+
+  It was a very pale blue, easily mistaken for white.  Some may doubt
+  this, but it's important to remember that
+  \begin{itemize}
+  \item a pale blue viewed in the reddish light of evening can appear
+    white,
+  \item the artist had run out of blue paint, and thought he could get
+    by with an approximation, and
+  \item blue is a nice color.
+  \end{itemize}
+
+\stepcounter{enumi}
+\item
+  \begin{enumerate}
+  \item Define the universe.
+  \item Give three examples.
+  \end{enumerate}
+
+\bigskip
+
+  \begin{enumerate}
+  \item   The world is all that is the case.  Thus, the world will not
+    only fit into the case, it \emph{is} the case.
+  \item
+    \begin{enumerate}
+    \item It's actually a rather nice case.
+    \item We shall give $\comb(3,1) = \binom{3}{1} = \perm(3,1)$
+      examples, but we shall not do that here.
+    \end{enumerate}
+  \end{enumerate}
+
+\stepcounter{enumi}
+\item What is $\e^{x}?$
+
+\bigskip
+
+We have
+\begin{displaymath}
+  \e^{x} = 1 + x + \frac{x^{2}}{2!} + \frac{x^{3}}{3!} + \cdots
+\end{displaymath}
+which came out large since it was typeset as a display.
+
+\end{enumerate}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

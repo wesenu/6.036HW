@@ -1,0 +1,218 @@
+\documentclass[12pt]{amsart}
+\usepackage{amssymb}
+
+\usepackage{enumitem}
+\setlist[enumerate,1]{label=\arabic*.}
+\setlist[enumerate,2]{label=(\alph*)}
+\setlist[enumerate,3]{label=(\roman*)}
+
+
+\DeclareMathOperator{\perm}{P}
+\DeclareMathOperator{\comb}{C}
+\newcommand{\e}{\mathrm{e}}
+
+
+
+
+%--------------------------------------------------------------------
+\begin{document}
+
+\begin{center}
+  \bfseries
+  Math 225 Assignment 2 Even\\
+  Homework number 1, due Sep 21, 2018
+\end{center}
+
+\bigskip
+
+2. Nine different people walk into a delicatessen to buy a sandwich. Three always
+order tuna fish, two always order chicken, two always order roast beef, and two
+order any of the three types of sandwich.
+\bigskip
+
+(a) How many different sequences of sandwiches are possible?
+\bigskip
+
+Step 1: Since we don't care about the people and only about the sandwich, we can separate the situation into different circumstances where we anticipate  what type of sandwich the two who order any of the three types of sandwich order.
+\smallskip
+
+\begin{enumerate}
+\item Situation 1: Both orders tuna. Then we end up having 5 tuna, 2 chicken, 2 beef. We can use the model of distinct object distribution:
+
+\begin{displaymath}
+\perm(9;5,2,2)
+\end{displaymath}
+
+\item Situation: Both orders chicken. Then we end up having 3 tuna, 4 chicken, 2 beef. We can use the model of distinct object distribution:
+
+\begin{displaymath}
+\perm(9;3,4,2)
+\end{displaymath}
+
+\item Situation: Both orders beef. Then we end up having 3 tuna, 2 chicken, 4 beef. The number of permutations in this case equal situation 2. 
+\smallskip
+
+\item Situation: 1 orders chicken, 1 orders tuna. Then we end up having 4 tuna, 3 chicken, 2 beef. Similarly, the number of permutations in this case equal situation 2. 
+\smallskip
+
+\item Situation: 1 orders chicken, 1 orders beef. Then we end up having 3 tuna, 3 chicken, 3 beef. We can use the model of distinct object distribution:
+
+\begin{displaymath}
+\perm(9;3,3,3)
+\end{displaymath}
+
+\item Situation: 1 orders beef, 1 orders tuna. Then we end up having 4 tuna, 2 chicken, 3 beef. The number of permutations in this case equal situation 2. 
+\smallskip
+\end{enumerate}
+
+Step 2: Using the additional principle 
+
+\begin{displaymath}
+\perm(9;5,2,2)+ \perm(9;3,4,2)\cdot4 +\perm(9;3,3,3)
+\end{displaymath}
+
+\smallskip
+
+(b) How many different (unordered) collections of sandwiches are possible?
+\smallskip
+
+We can see from question (a) that we could find 6 different situations, and thus there are 6 ways of creating an unordered subset. 
+\bigskip
+
+
+4.In an international track competition, there are 5 United States athletes, 4
+Russian athletes, 3 French athletes, and 1 German athlete. How many rankings
+of the 13 athletes are there when:
+(a) Only nationality is counted?
+(b) Only nationality is counted and all the U.S. athletes finish ahead of all the
+Russian athletes?
+\bigskip
+
+(a) We can use the model of distinct object distribution. Thus, the total number of ways is: 
+\begin{displaymath}
+\perm(r;r_1,r_2,...,r_n)= (13; 5,4,3,1)
+\end{displaymath}
+\smallskip
+
+(b) The ristriction is that all the US athletes are ahead of all the Russian athletes. 
+\smallskip
+
+Step 1: Position the German athlete- 13 ways 
+\smallskip
+
+Step 2: Position the 3 French athletes- C(13-1,3) ways 
+\smallskip
+
+Step 3: Position the 5 US athletes in the front of the remaining (13-3-1) slots - 1 way
+\smallskip
+
+Step 4: Position the remaining Russian athletes in the remaining slots - 1 way
+\begin{displaymath}
+13\cdot\comb(13-1,3)\cdot 1\cdot 1=13\cdot\comb(12,3)\cdot 1\cdot 1
+\end{displaymath}
+
+\bigskip
+6. How many distributions of 21 different objects into three different boxes are
+there with twice as many objects in one box as in the other two combined?
+\smallskip
+
+Step 1: Since one box has twice as many objects as in the other two combined. Assume that the box with the most objects has x objects, and the other two box each has y and z objects, then
+\begin{displaymath}
+x = 2\cdot (y + z)
+x + y + z = 21
+x = 14 
+y + z = 7
+\end{displaymath}
+
+Step 2: We use the model of organizing distinct objects as well as the additional principle. We have the following situations (assuming that box A is the one that  always have 14 objects) : 
+1 in B, 6 in C
+\smallskip
+
+2 in B, 5 in C
+\smallskip
+
+3 in B, 4 in C
+\smallskip
+
+and vice versa, thus, using the model of distinct object distribution (imagining labeling each of the distinct object with a label of box X, we have 
+
+\begin{displaymath}
+2 \cdot (P(21;14,1,6) + P (21;14,2,5) + P (21;14,4,3))
+\end{displaymath}
+\smallskip
+
+
+
+8. How many ways are there to distribute three different teddy bears and nine
+identical lollipops to four children:
+\smallskip
+
+(a) Without restriction?
+\smallskip
+
+Step 1: We distribute the 3 different teddy bears, and we have 
+\begin{displaymath}
+4^3   \hspace{0.5cm}   ways
+\end{displaymath}
+
+Step 2: We distribute the 9 identical lollipops:
+\smallskip
+\begin{displaymath}
+\comb(9+4-1,9) =\comb (12,9)  \hspace{0.5cm}   ways
+\end{displaymath}
+
+Step 3: Using the multiplication rule, we have 
+\begin{displaymath}
+4^3\cdot\comb (12,9) \hspace{0.5cm}   ways
+\end{displaymath}
+
+\smallskip
+
+(b) With no child getting two or more teddy bears?
+\smallskip
+
+Step 1: Since no child gets two or more teddy bears, in each case, there should be 3 child each getting 1 teddy bears, so we choose 3 children out of the four children, and there are C(4,3) ways to do that.
+\smallskip
+
+Step 2: For each of the 3 children who get teddy bears, there are 3 different teddy bears that they each might get, so there are 3! ways to distribute the teddy bears. 
+\smallskip
+
+Step 3: Then we distribute the identical lollipops in the same way as before. Using the multiplication rules, we have 
+\begin{displaymath}
+\comb (4,3)\cdot3!\cdot\comb (12,9) \hspace{0.5cm}   ways
+\end{displaymath}
+
+\smallskip
+(c) With each child getting three “goodies”?
+\smallskip
+
+Step 1: We would use the additional principle and divide the situations into different categories.
+\smallskip
+
+Circumstance 1: one of the child has three teddy bears. There are 3 ways to choose the child that have 3 teddy bears. Then, we would give 3 lollipops to each of the other 3 children. Therefore,
+
+\begin{displaymath}
+4  \hspace{0.5cm} ways
+\end{displaymath}
+\smallskip
+
+Circumstance 2: three children each has one teddy bear. We would have C(4,3) ways to pick those children, and 3! ways to choose which distinct teddy bear to give to each one of them. Then, we would give each of the three children who already have teddy bears two lollipops, and give three lollipops to the one who does not have teddy bears. Finally, we deliver the identical lollipops to each of the children as needed, and there is only one way to do so.
+
+\begin{displaymath}
+\comb (4,3)\cdot3! \hspace{0.5cm}   ways
+\end{displaymath}
+
+Circumstance 3: one children has one teddy bear, and the other children has two teddy bears. First, there are C(4,1) ways to choose the children who has the one teddy bear, and there are 3 ways to choose which teddy bear to give to that child. Then, we have C(3,1) ways to choose the other child, and there is one way through which we could give the rest of the teddy bears to that child. Then, we distribute lollipops as needed.
+\begin{displaymath}
+\comb (4,1)\cdot3\cdot\comb (3,1)\hspace{0.5cm}   ways
+\end{displaymath}
+\smallskip
+
+Thus, using the additional principle, we have
+
+\begin{displaymath}
+4+\comb (4,3)\cdot3!+\comb (4,1)\cdot3\cdot\comb (3,1)\hspace{0.5cm}   ways
+\end{displaymath}
+\smallskip
+
+\end{document}

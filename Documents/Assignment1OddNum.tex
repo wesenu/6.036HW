@@ -1,0 +1,224 @@
+\documentclass[12pt]{amsart}
+\usepackage{amssymb}
+
+\usepackage{enumitem}
+\setlist[enumerate,1]{label=\arabic*.}
+\setlist[enumerate,2]{label=(\alph*)}
+\setlist[enumerate,3]{label=(\roman*)}
+
+
+\DeclareMathOperator{\perm}{P}
+\DeclareMathOperator{\comb}{C}
+\newcommand{\e}{\mathrm{e}}
+
+
+
+
+%--------------------------------------------------------------------
+\begin{document}
+
+\begin{center}
+  \bfseries
+  Math 225 Assignment 1\\
+\end{center}
+
+\begin{enumerate}
+\item How many five-letter “words” (sequence of any five letters with repetition) are
+there? How many with no repeated letters?
+\bigskip
+  \begin{enumerate}
+  \item With repetition.            
+ 
+  First, choose the first letter in the sequence out of 26 letters. Then, since repetition 
+  is allowed, choose the second letter out of 26 letters, etc. Using the multiplication 
+  principle, we can learn that, the total number of such "words" is     
+  
+   \begin{displaymath}
+   26^5 
+  \end{displaymath}
+
+ 
+  \item Without repetition.       
+  
+  Similarly, we first choose the first letter out of 26 letters. Then, we only have 25 choices left for the second letter, and so on. Using the multiplication principle, we learn that the number of 5-permutations of 26 distinguishable objects can be 
+  represented by 
+     \begin{displaymath}
+    \perm(26,5) = \frac{26!}{21!} 
+  \end{displaymath}
+  
+  \end{enumerate}
+
+ \bigskip
+
+
+\item How many ways are there to pick 2 different cards from a standard 52-card deck
+such that
+
+\bigskip
+  \begin{enumerate}
+  \item The first card is an Ace and the second card is not a Queen? \smallskip
+  
+  We deal with the first constraint by choosing the first card, and we have 4 Aces to 
+  choose from. After choosing the first card, we have 51 cards left to choose from.
+  Now, we deal with the second constraint by deducting the number of 
+  queens from the choices for the second card, so we have (51-4) left cards to choose 
+  from for the second card. 
+
+   \begin{displaymath}
+   4\cdot (52-1-4) \cdot = 4\cdot (47) = 188
+  \end{displaymath}
+  \smallskip
+  
+ \item The first card is a spade and the second card is not a queen?\smallskip
+  
+\smallskip We can use the addition principle to separate two cases: 
+   \begin{enumerate}
+  \item The first card is a spade but not a queen of spades. In this case, we have 12 choices
+  for the first card. Then, we still have to avoid queen of spades when we are choosing the second card, which should not be a queen according to the restraint. So,
+  \begin{displaymath}
+   12\cdot (52-1-4) \cdot = 12\cdot (47) = 564
+  \end{displaymath}
+  \item The first card is the queen of spades. In this case, we still have (52-1-3) choices for the second card.
+   \end{enumerate}
+  \bigskip
+   So, using the addition principle, we have
+   \begin{displaymath}
+   48+564=612 
+  \end{displaymath}
+  ways in total to choose the two cards.
+
+\bigskip
+
+
+
+\end{enumerate}
+ \item 
+  (a) How many election outcomes are possible with 20 people each voting for
+one of seven candidates (the outcome includes not just the totals but also
+who voted for each candidate)?    
+
+\bigskip 
+The first step, we let the first person vote, and the person would have 7 choices, and similarly, for the second person, they would get 7 choices, thus, using the multiplication principle
+     \begin{displaymath}
+     7^{20}
+  \end{displaymath}
+
+(b) How many election outcomes are possible if exactly one person votes for
+candidate A and exactly one person votes for candidate D?
+ \bigskip
+ 
+Step 1: one person votes for candidate A, and there are 20 ways of doing so \\ 
+
+Step 2: one person votes for candidate D, and there are 19 ways of doing so \\
+
+Step 3: the third person votes for whomever they want to except for A,D , and there are 5 choices\\
+
+Step 4: similar to step 3, the fourth person has 5 choices... etc. Thus, using multiplication principle\\
+ \begin{displaymath}
+    20\cdot19\cdot\  5^{18}
+  \end{displaymath}
+  
+\bigskip
+ \item 
+ How many ways are there for a man to invite some (nonempty) subset of his
+10 friends to dinner?
+
+\bigskip 
+
+Step 1: He can invite 1 friend to dinner, and he would have C(10,1) to do so \\ 
+
+Step 2:He can invite 2 friend to dinner, and he would have C(10,2) to do so\\
+
+Similarly, we can calculate the total numbers of ways to invite 10 friends by adding up the combinations,
+
+ \begin{displaymath}
+    total=\comb(10,1)+ \comb(10,2)+\comb(10,3)+\comb(10,...)+\comb(10,10)
+    \newline  \end{displaymath}
+\begin{displaymath}
+ =\binom{10}{1} +\binom{10}{2}+\binom{10}{3}+\binom{10}{4}+\binom{10}{5}+\binom{10}{6}+\binom{10}{7}+\binom{10}{8}
+    +\binom{10}{9} +\binom{10}{10}         
+  \end{displaymath}
+  
+\bigskip
+
+\item
+ How many 5-letter sequences (formed from the 26 letters in the alphabet, with
+repetition allowed) contain exactly one A and exactly two Bs?
+\bigskip
+
+The first constraint is that the sequence has exactly one A, and there are 5 positions in a sequence where an A can go. The second constraint is that there are exactly two Bs, and with 1 position already taken by A, there are 4 positions where the two Bs can go, and the 2 positions can be chosen using C(4,2). Finally, for the 2 spots left, we can choose from the 24 available letters. Using the multiplication rule, we can calculate the number of arrangements for the sequence by:
+ 
+\begin{displaymath}
+5\cdot\comb(4,2)\cdot\ 24^{2}
+\end{displaymath}
+
+\item
+How many triangles are formed by
+pieces of n nonparallel lines, assuming
+no three lines cross at a point; for example
+the four lines at the right form
+four triangles: acd, abf, efd, and ebc?
+
+\bigskip
+It takes 3 lines to form a  triangle. Since non of the lines are parallel, and no 3 lines cross one point, every distinct combination of 3 lines can form a distinct triangle. Thus, we have to find how many subsets of 3 lines we can have from n lines. 
+
+\begin{displaymath}
+\comb(n,3)=\binom{n}{3}
+\end{displaymath}
+
+\bigskip
+
+\item
+A student must answer 5 out of 10 questions on a test, including at least 2 of
+the first 5 questions. How many subsets of 5 questions can be answered?
+\bigskip
+
+First, since the constraint is that a student has to answer at least 2 out of the first 5 questions.
+ \begin{displaymath}
+    \comb(5,2) = \binom{5}{2} 
+  \end{displaymath}\bigskip
+Then, we pick the other (5-2) questions out of the remaining total of (10-2) questions.
+ \begin{displaymath}
+    \comb(8,3) = \binom{8}{3} 
+      \end{displaymath}
+      \bigskip
+Using the multiplication rule, the number of subsets is 
+      \begin{displaymath}
+ \comb(5,2)\cdot \comb(8,3)  
+      \end{displaymath}
+      \smallskip
+
+\item
+How many 6-letter sequences are there with at least 3 vowels (A, E, I, O, U)?
+No repetitions are allowed.
+\bigskip
+
+First, we make sure that the sequences do contain at least 3 vowels, and since there are 5 vowels in total, we can represent the combination by C(5,3). Then, since we are sure that the sequences do contain at least these 3 vowels, we can find the 3 spots for them first by calculating P(6,3). Finally, we will arrange the rest of the letters in the sequence by calculating P((26-3),3).
+\begin{displaymath}
+\comb(5,3)\cdot\perm(6,3)\cdot\perm(23,3)=\binom{5}{3}\cdot\frac{6!}{3!}\cdot\frac{23!}{20!}
+\end{displaymath}
+
+\bigskip
+\item
+How many ways are there to arrange n (distinct) people in a straight line so
+that: (i) Mr. and Mrs. Smith are side by side; and (ii) Mrs. Tucker is k positions
+away from the Smiths ?
+\bigskip
+
+(i)Since the Smiths are side by side, we can clump them together into one group and treat them as one object for our arrangements, and there are 2 ways to clump them together, thus, 
+\begin{displaymath}
+2\cdot \perm((n-1),(n-1))=2\cdot{(n-1)!}
+\end{displaymath}
+\smallskip
+(ii)To place Mrs.Tucker k position away from the Smiths, we still view the Smiths as a clump. Assume that the Smiths are on the right end of the line (with one of them in position n and the other in position n-1) , then Mrs.Tucker would be on position (n-2-(k-1)) to be (k-1) positions away from the Smiths, and so on. Thus, we would have (n-2-(k-1)) possible position for Mrs.Tucker when she is k position to the left of the Smiths, and we have 2 ways of clumping the Smiths; and, for the other (n-3) people we can calculate the number of arrangements using the permutation notation. Similarly, we have n-2-(k-1) positions for Tucker when she is k position to the right of the Smiths, still 2 ways of clumping the Smiths and the same number of arrangements for the rest of the crowd, thus, using the addition principle
+
+\begin{displaymath}
+2\cdot (n-2-(k-1))\cdot\perm((n-3),(n-3))+2\cdot(n-2-(k-1))\cdot\perm=4\cdot(n-1-k)\cdot\perm(n-3)
+\end{displaymath}
+
+
+
+
+
+\end{enumerate}
+\end{document}

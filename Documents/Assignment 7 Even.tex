@@ -1,0 +1,108 @@
+\documentclass[12pt]{amsart}
+\usepackage{amssymb}
+
+\usepackage{enumitem}
+\setlist[enumerate,1]{label=\arabic*.}
+\setlist[enumerate,2]{label=(\alph*)}
+\setlist[enumerate,3]{label=(\roman*)}
+
+
+\DeclareMathOperator{\perm}{P}
+\DeclareMathOperator{\comb}{C}
+\newcommand{\e}{\mathrm{e}}
+
+% To have all the question numbers be even, we use an enumerate
+% environment to number the questions and we begin a new question with
+% \stepcounter{enumi}
+% \item
+
+
+%--------------------------------------------------------------------
+\begin{document}
+
+\begin{center}
+  \bfseries
+  Ima Student\\
+  Homework number 1, due July 4, 1776\\
+  Even numbered questions
+\end{center}
+
+\bigskip
+
+\begin{enumerate}
+\stepcounter{enumi}
+\item Who's buried in Grant's tomb?  In particular,
+  \begin{enumerate}
+  \item Is \emph{anyone} buried in Grant's tomb?
+  \item Does the tomb really belong to Grant?
+  \end{enumerate}
+
+  Here's some text that's part of the answer. Here's some text that's
+  part of the answer. Here's some text that's part of the
+  answer. Here's some text that's part of the answer. Here's some text
+  that's part of the answer. Here's some text that's part of the
+  answer. Here's some text that's part of the answer. Here's some text
+  that's part of the answer. Here's some text that's part of the
+  answer.
+  \begin{enumerate}
+  \item It depends on what you mean by \emph{buried}.
+  \item Perhaps, because $\comb(6,2) = \binom{6}{2}$.
+  \end{enumerate}
+  Then again, $\perm(6,2) = \frac{6!}{4!}$.  That's worth repeating
+  more prominently:
+  \begin{displaymath}
+    \perm(6,2) = \frac{6!}{4!}
+  \end{displaymath}
+
+\stepcounter{enumi}
+\item What was the color of George Washington's white horse?
+
+  It was a very pale blue, easily mistaken for white.  Some may doubt
+  this, but it's important to remember that
+  \begin{itemize}
+  \item a pale blue viewed in the reddish light of evening can appear
+    white,
+  \item the artist had run out of blue paint, and thought he could get
+    by with an approximation, and
+  \item blue is a nice color.
+  \end{itemize}
+
+\stepcounter{enumi}
+\item
+  \begin{enumerate}
+  \item Define the universe.
+  \item Give three examples.
+  \end{enumerate}
+
+\bigskip
+
+  \begin{enumerate}
+  \item   The world is all that is the case.  Thus, the world will not
+    only fit into the case, it \emph{is} the case.
+  \item
+    \begin{enumerate}
+    \item It's actually a rather nice case.
+    \item We shall give $\comb(3,1) = \binom{3}{1} = \perm(3,1)$
+      examples, but we shall not do that here.
+    \end{enumerate}
+  \end{enumerate}
+
+\stepcounter{enumi}
+\item What is $\e^{x}?$
+
+\bigskip
+
+We have
+\begin{displaymath}
+  \e^{x} = 1 + x + \frac{x^{2}}{2!} + \frac{x^{3}}{3!} + \cdots
+\end{displaymath}
+which came out large since it was typeset as a display.
+
+\end{enumerate}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
